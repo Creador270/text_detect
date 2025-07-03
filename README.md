@@ -6,7 +6,7 @@ A simple package for tracking text in various environmental conditions using [Ea
 **1.** Clone the repository into your current ROS2 workspace:
 ```bash
 cd <ros2_ws>/src/
-git clone 
+git clone https://github.com/Creador270/text_detect.git
 ```
 **2.** build the package from your current ros2 workspace using colcon
 ```bash
@@ -16,13 +16,13 @@ colcon build --symlink-install --packages-select tex_detect
 ## Usage
 Source your workspace and run the node:
  ```bash
-ros2 run tex_detect text_detect
+ros2 run text_detect text_detect
 ```
 The node publishes the detected bounding boxes around the text and the corresponding coordinates as an image topic using [cv_bridge](https://github.com/ros-perception/vision_opencv.git)
 ## Topics
 * **Published topics**
     * `text_detect/image_out` – Image topic with detected text in bounding box
-    * `text_detect/coordinates` - Coordinates respect to the Image on a list Int16MultiArray topic
+    * `text_detect/coordinates` - Coordinates to the Image on a list Int16MultiArray topic
 
 ## Dependencies
 * EasyOCR >=1.7.2
